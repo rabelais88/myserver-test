@@ -1,0 +1,32 @@
+<html>
+  <div>hello!!</div>
+  <!-- <form action="/sendtext" method="POST">
+    <input type="text" name="mytext" />
+    <input type="submit" value="보내기" />
+  </form> -->
+  <script>
+    function onSend() {
+    console.log('send clicked');
+    const message = document.getElementById('message').value;
+    const url = '/sendtext'
+    const opts = {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, cors, *same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+          'Content-Type': 'application/json',
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: (JSON.stringify({ message }))
+    }
+    fetch(url, opts).then(res => res.json().then(_res => {
+      alert(JSON.stringify(_res));
+    }))
+  }
+  </script>
+  <input type="text" id="message">
+  <button onclick="onSend()">
+    send info
+  </button>
+</html>

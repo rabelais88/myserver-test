@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "name": "my-server",
+  "version": "1.0.0",
+  "description": "my server",
+  "main": "server.js",
+  "author": "sungryeol <sungryeolp@gmail.com>",
+  "license": "MIT"
+}
